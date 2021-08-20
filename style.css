@@ -1,3 +1,113 @@
-body {
-  background-color: aqua;
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: MinecraftiaRegular sans-serif;
+}
+
+html {
+  font-size: 100%; /* -> 16px; */
+}
+
+
+header
+{
+  padding: 10px 30px;
+  background-color: #222;
+}
+
+header a
+{
+  position: relative;
+  font-size: 2rem;
+  text-decoration: none;
+  font-family: MinecraftiaRegular;
+  font-weight: 500;
+  color: white;
+}
+
+footer
+{
+  margin-top:auto;
+  padding: 10px 30px;
+  background-color: #fff;
+}
+
+.link h3
+{
+  float: left;
+  margin: 6px 8px 0 0;
+  font-family: MinecraftiaRegular;
+  font-weight: 100;
+  font-size: 0.9rem;
+}
+
+.maingrid
+{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.main
+{
+  background-color: #fff;
+}
+
+.sign_wrapper
+{
+  position: relative;
+  width: 100%;
+}
+
+.sign_wrapper::before {
+  content:"";
+  display: block;
+  padding-top: 100%; /* 高さを幅の75%に固定 */
+}
+
+.sign
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: url("sources/sign/oak.png");
+  background-color: gray;
+  position: relative;
+}
+
+.maingrid .command
+{
+  height: 100vh;
+  background-color: #eee;
+  grid-column-start: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.maingrid .util
+{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #33f;
+  height: auto;
+}
+
+@media(max-width:991px)
+{
+  .maingrid
+  {
+    grid-template-columns: 1fr;
+  }
+  .maingrid .command
+  {
+    height: 70vh;
+    grid-column-start: auto;
+    grid-row-start: auto;
+    grid-row-end: auto;
+  }
 }
