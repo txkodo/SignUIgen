@@ -1,113 +1,149 @@
-*
-{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: MinecraftiaRegular sans-serif;
-}
-
-html {
-  font-size: 100%; /* -> 16px; */
-}
-
-
-header
-{
+@charset "UTF-8";
+header {
+  margin-right: 30px;
+  border-bottom-right-radius: 10px;
   padding: 10px 30px;
   background-color: #222;
 }
 
-header a
-{
+header a {
   position: relative;
   font-size: 2rem;
   text-decoration: none;
-  font-family: MinecraftiaRegular;
   font-weight: 500;
   color: white;
 }
 
-footer
-{
-  margin-top:auto;
+footer {
+  margin-top: auto;
   padding: 10px 30px;
   background-color: #fff;
 }
 
-.link h3
-{
+.link h3 {
   float: left;
   margin: 6px 8px 0 0;
-  font-family: MinecraftiaRegular;
   font-weight: 100;
   font-size: 0.9rem;
 }
 
-.maingrid
-{
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.main
-{
+.main {
   background-color: #fff;
 }
 
-.sign_wrapper
-{
+.sign_editor {
+  padding: 5%;
+}
+
+.sign_wrapper {
   position: relative;
   width: 100%;
 }
 
-.sign_wrapper::before {
-  content:"";
-  display: block;
-  padding-top: 100%; /* 高さを幅の75%に固定 */
+.sign_wrapper .sign {
+  position: relative;
+  background-image: url("sources/sign/oak.png");
+  background-size: contain;
+  background-color: coral;
 }
 
-.sign
-{
+.sign_wrapper .sign::before {
+  content: "";
+  display: block;
+  padding-top: 50%;
+  /* 高さを幅の75%に固定 */
+}
+
+.sign_wrapper .sign ul {
+  height: 100%;
   position: absolute;
   top: 0;
-  left: 0;
   bottom: 0;
+  left: 0;
   right: 0;
-  background-image: url("sources/sign/oak.png");
-  background-color: gray;
-  position: relative;
 }
 
-.maingrid .command
-{
-  height: 100vh;
+.sign_wrapper .sign ul li {
+  line-height: 0;
+  padding: 0;
+}
+
+.sign_wrapper .sign ul li svg text {
+  text-anchor: middle;
+  dominant-baseline: central;
+}
+
+.signtexts {
+  margin-top: 5%;
+}
+
+.signtexts ul {
+  list-style: none;
+}
+
+.signtexts ul h3 {
+  display: inline;
+}
+
+.signtexts ul > * + * {
+  padding-top: 5px;
+}
+
+.button_editor {
+  padding: 5%;
+}
+
+.button_editor .area_list {
+  margin-top: 20px;
+  padding: 10px;
   background-color: #eee;
-  grid-column-start: 2;
-  grid-row-start: 1;
+  border-radius: 3px;
+}
+
+.button_editor .area_list h3 {
+  display: inline;
+}
+
+.button_editor .area_list ul > li + li {
+  margin-top: 5px;
+}
+
+.button_editor .area_list ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.maingrid {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.maingrid .button_editor {
+  height: 100vh;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
   grid-row-end: 3;
 }
 
-.maingrid .util
-{
+.maingrid .util {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: relative;
   background-color: #33f;
   height: auto;
 }
-
-@media(max-width:991px)
-{
-  .maingrid
-  {
-    grid-template-columns: 1fr;
-  }
-  .maingrid .command
-  {
-    height: 70vh;
-    grid-column-start: auto;
-    grid-row-start: auto;
-    grid-row-end: auto;
-  }
-}
+/*# sourceMappingURL=style.css.map */
