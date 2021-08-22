@@ -14,23 +14,34 @@ for(let i = 1;i <= 4 ;i++){
   })
 }
 
-class AreaList{
-  constructor(ulElement,addButton){
-    this.list = ulElement
-    addButton.addEventListener('click', () => {
-      const li = document.createElement('li')
-      li.classList.add('dp2')
-      const span = document.createElement('span')
-      span.textContent = 'area'
-      li.appendChild(span)
-      this.append(li)
-    })
+class AreaItem{
+  constructor(areaList){
+    this.areaList = areaList
+    this.active =false
+    const item = document.createElement('li')
+    item.onclick = this.genOnClick(this)
+    item.classList.add('dp2')
+    const span = document.createElement('span')
+    span.textContent = 'area'
+    item.appendChild(span)
+    item.appendChild(this.genDelButton())
+    this.item = item
+  }
+  
+  genOnClick(self){
+    return () => {
+      self.activate()
+    }
   }
 
-  append(li) {
-    const delButtoon = this.genDelButton()
-    li.appendChild(delButtoon)
-    this.list.appendChild(li)
+  activate(){
+    this.areaList.disactivate()
+    this.item.classList.add('active')
+    this.areaList.onUpdate()
+  }
+  
+  isActive(){
+    return this.item.classList.contains('active')
   }
 
   genDelButton(){
@@ -38,13 +49,45 @@ class AreaList{
     const delButtonIcon = document.createElement('span')
     delButtonIcon.classList.add('far','fa-trash-alt','icon')
     delButton.appendChild(delButtonIcon)
-    delButton.addEventListener('click',() => this.remove(delButton))
+    delButton.addEventListener('click',() => this.remove())
     return delButton
   }
 
-  remove(delButton){
-    const delRecord = delButton.closest('li')
+  remove(){
+    this.areaList.remove(this.item)
+  }
+}
+
+class AreaList{
+  constructor(ulElement,addButton){
+    this.list = ulElement
+    addButton.addEventListener('click', () => {
+      const areaItem = new AreaItem(this)
+      this.list.append(areaItem.item)
+    })
+  }
+
+  append(li) {
+    const delButtoon = this.genDelButton()
+    li.appendChild(delButtoon)
+    this.list.appendChild(li)
+    this.onUpdate()
+  }
+
+  remove(delRecord){
     this.list.removeChild(delRecord)
+    this.onUpdate()
+  }
+
+  disactivate(){
+    console.log(this.list.children)
+    for (const item of this.list.children){
+      item.classList.remove('active')
+    }
+  }
+
+  onUpdate(){
+    
   }
 }
 

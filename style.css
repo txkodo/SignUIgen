@@ -27,6 +27,13 @@ footer {
   font-size: 0.9rem;
 }
 
+.inputcommand {
+  position: relative;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .main {
   background-color: #fff;
 }
@@ -115,6 +122,11 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.button_editor .area_list ul li.active {
+  background-color: #222;
+  color: white;
 }
 
 .maingrid {
