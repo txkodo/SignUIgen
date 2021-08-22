@@ -49,7 +49,7 @@ footer {
 
 .sign_wrapper .sign {
   position: relative;
-  background-image: url("sources/sign/oak.png");
+  background-image: url("../sources/sign/oak.png");
   background-size: contain;
   background-color: coral;
 }
