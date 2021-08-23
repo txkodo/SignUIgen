@@ -126,7 +126,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, style) {\
   \********************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n__webpack_require__(/*! ./scss/style.scss */ \"./src/scss/style.scss\");\r\nvar area_list_1 = __webpack_require__(/*! ./ts/area_list */ \"./src/ts/area_list.ts\");\r\nvar sign_1 = __webpack_require__(/*! ./ts/sign */ \"./src/ts/sign.ts\");\r\nfor (var i = 1; i <= 4; i++) {\r\n    var input = document.getElementById(\"text\" + i + \"_input\");\r\n    var output = document.getElementById(\"text\" + i + \"_output\");\r\n    sign_1.reactiveText(input, output);\r\n}\r\nvar areaList = document.getElementById('areaList');\r\nvar areaListAddButton = document.getElementById('areaList-addButton');\r\nif (areaList && areaListAddButton) {\r\n    var areaInput = new area_list_1.AreaInput(document.getElementById('area-name'), document.getElementById('area-x0'), document.getElementById('area-x1'), document.getElementById('area-y0'), document.getElementById('area-y1'), document.getElementById('area-command'));\r\n    new area_list_1.AreaManager(areaList, areaListAddButton, areaInput);\r\n}\r\n\n\n//# sourceURL=webpack://signuigenerator/./src/app.ts?");
+eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n__webpack_require__(/*! ./scss/style.scss */ \"./src/scss/style.scss\");\r\n__webpack_require__(/*! ./img/sign/oak.png */ \"./src/img/sign/oak.png\");\r\nvar area_list_1 = __webpack_require__(/*! ./ts/area_list */ \"./src/ts/area_list.ts\");\r\nvar sign_1 = __webpack_require__(/*! ./ts/sign */ \"./src/ts/sign.ts\");\r\nfor (var i = 1; i <= 4; i++) {\r\n    var input = document.getElementById(\"text\" + i + \"_input\");\r\n    var output = document.getElementById(\"text\" + i + \"_output\");\r\n    sign_1.reactiveText(input, output);\r\n}\r\nvar areaList = document.getElementById('areaList');\r\nvar areaListAddButton = document.getElementById('areaList-addButton');\r\nif (areaList && areaListAddButton) {\r\n    var areaInput = new area_list_1.AreaInput(document.getElementById('area-name'), document.getElementById('area-x0'), document.getElementById('area-x1'), document.getElementById('area-y0'), document.getElementById('area-y1'), document.getElementById('area-command'));\r\n    new area_list_1.AreaManager(areaList, areaListAddButton, areaInput);\r\n}\r\n\n\n//# sourceURL=webpack://signuigenerator/./src/app.ts?");
 
 /***/ }),
 
@@ -147,6 +147,16 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /***/ ((__unused_webpack_module, exports) => {
 
 eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.reactiveText = void 0;\r\nvar reactiveText = function (input, output) {\r\n    input.addEventListener('keyup', function () { output.textContent = input.value; });\r\n};\r\nexports.reactiveText = reactiveText;\r\n\n\n//# sourceURL=webpack://signuigenerator/./src/ts/sign.ts?");
+
+/***/ }),
+
+/***/ "./src/img/sign/oak.png":
+/*!******************************!*\
+  !*** ./src/img/sign/oak.png ***!
+  \******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"./assets/images/oak-c0190584634fe8f692bb..png\";\n\n//# sourceURL=webpack://signuigenerator/./src/img/sign/oak.png?");
 
 /***/ })
 
@@ -201,6 +211,18 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -215,6 +237,26 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /************************************************************************/
