@@ -16,7 +16,7 @@
   \**************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_cjs_js_destyle_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! -!../../node_modules/css-loader/dist/cjs.js!./destyle.css */ \"./node_modules/css-loader/dist/cjs.js!./src/scss/destyle.css\");\n/* harmony import */ var _node_modules_css_loader_dist_cjs_js_icons_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! -!../../node_modules/css-loader/dist/cjs.js!./icons.css */ \"./node_modules/css-loader/dist/cjs.js!./src/scss/icons.css\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/getUrl.js */ \"./node_modules/css-loader/dist/runtime/getUrl.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_3__);\n// Imports\n\n\n\n\nvar ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ../img/sign/oak.png */ \"./src/img/sign/oak.png\"), __webpack_require__.b);\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});\n___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_destyle_css__WEBPACK_IMPORTED_MODULE_1__.default);\n___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_icons_css__WEBPACK_IMPORTED_MODULE_2__.default);\nvar ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_3___default()(___CSS_LOADER_URL_IMPORT_0___);\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"@charset \\\"UTF-8\\\";\\nhtml {\\n  font-size: 16px;\\n}\\n\\nbody {\\n  font-family: MinecraftiaRegular;\\n}\\n\\nh2 {\\n  font-weight: 200;\\n  font-size: 2rem;\\n  margin: 10px;\\n}\\n\\n.h3,\\nh3 {\\n  font-weight: 100;\\n  font-size: 1.5rem;\\n  margin: 10px;\\n}\\n\\n.icon {\\n  background: none;\\n  color: #888;\\n  font-size: 1.5rem;\\n}\\n\\n.inputtext {\\n  font-family: MinecraftiaRegular;\\n  border: none;\\n  font-size: 1.2rem;\\n  display: block;\\n}\\n.inputtext.narrow {\\n  width: 20%;\\n}\\n.inputtext.r {\\n  text-align: center;\\n}\\n.inputtext[readonly] {\\n  background-color: #222;\\n}\\n\\n.dp1 {\\n  border-radius: 3px;\\n  padding: 5px;\\n  background-color: #eee;\\n}\\n\\n.dp2 {\\n  border-radius: 3px;\\n  padding: 5px;\\n  background-color: #ddd;\\n}\\n\\n.inner {\\n  margin: 10px;\\n}\\n\\n.column {\\n  display: flex;\\n  vertical-align: baseline;\\n}\\n\\n@media (max-width: 991px) {\\n  html {\\n    font-size: 150%;\\n  }\\n\\n  .maingrid {\\n    grid-template-columns: 1fr;\\n  }\\n\\n  .maingrid .button_editor {\\n    height: 70vh;\\n    grid-column-start: auto;\\n    grid-row-start: auto;\\n    grid-row-end: auto;\\n    font-size: 50px;\\n  }\\n}\\nheader {\\n  margin-right: 30px;\\n  border-bottom-right-radius: 10px;\\n  padding: 10px 30px;\\n  background-color: #222;\\n}\\n\\nheader a {\\n  position: relative;\\n  font-size: 2rem;\\n  text-decoration: none;\\n  font-weight: 500;\\n  color: white;\\n}\\n\\nfooter {\\n  margin-top: auto;\\n  padding: 10px 30px;\\n  background-color: #fff;\\n}\\n\\n.link h3 {\\n  float: left;\\n  margin: 6px 8px 0 0;\\n  font-weight: 100;\\n  font-size: 0.9rem;\\n}\\n\\n.inputcommand {\\n  position: relative;\\n  width: 100%;\\n  box-sizing: border-box;\\n}\\n\\n.main {\\n  background-color: #fff;\\n}\\n\\n.sign_editor {\\n  padding: 5%;\\n}\\n\\n.sign_wrapper {\\n  position: relative;\\n  width: 100%;\\n}\\n.sign_wrapper .sign {\\n  position: relative;\\n  background-image: url(\" + ___CSS_LOADER_URL_REPLACEMENT_0___ + \");\\n  background-size: contain;\\n  background-color: coral;\\n}\\n.sign_wrapper .sign::before {\\n  content: \\\"\\\";\\n  display: block;\\n  padding-top: 50%;\\n  /* 高さを幅の75%に固定 */\\n}\\n.sign_wrapper .sign ul {\\n  height: 100%;\\n  position: absolute;\\n  top: 0;\\n  bottom: 0;\\n  left: 0;\\n  right: 0;\\n}\\n.sign_wrapper .sign ul li {\\n  line-height: 0;\\n  padding: 0;\\n}\\n.sign_wrapper .sign ul li svg text {\\n  text-anchor: middle;\\n  dominant-baseline: central;\\n}\\n\\n.signtexts {\\n  margin-top: 5%;\\n}\\n.signtexts ul {\\n  list-style: none;\\n}\\n.signtexts ul h3 {\\n  display: inline;\\n}\\n.signtexts ul > * + * {\\n  padding-top: 5px;\\n}\\n\\n.button_editor {\\n  padding: 5%;\\n}\\n.button_editor .area_list {\\n  margin-top: 20px;\\n  padding: 10px;\\n  background-color: #eee;\\n  border-radius: 3px;\\n}\\n.button_editor .area_list h3 {\\n  display: inline;\\n}\\n.button_editor .area_list ul > li + li {\\n  margin-top: 5px;\\n}\\n.button_editor .area_list ul li {\\n  display: flex;\\n  justify-content: space-between;\\n}\\n.button_editor .area_list ul li.active {\\n  background-color: #222;\\n  color: white;\\n}\\n\\n.maingrid {\\n  width: 100%;\\n  display: grid;\\n  grid-template-columns: 1fr 1fr;\\n}\\n.maingrid .button_editor {\\n  height: 100vh;\\n  grid-column-start: 2;\\n  grid-row-start: 1;\\n  grid-row-end: 3;\\n}\\n.maingrid .util {\\n  display: flex;\\n  flex-direction: column;\\n  position: relative;\\n  background-color: #33f;\\n  height: auto;\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://signuigenerator/./src/scss/style.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet%5B1%5D.rules%5B1%5D.use%5B2%5D");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_cjs_js_destyle_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! -!../../node_modules/css-loader/dist/cjs.js!./destyle.css */ \"./node_modules/css-loader/dist/cjs.js!./src/scss/destyle.css\");\n/* harmony import */ var _node_modules_css_loader_dist_cjs_js_icons_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! -!../../node_modules/css-loader/dist/cjs.js!./icons.css */ \"./node_modules/css-loader/dist/cjs.js!./src/scss/icons.css\");\n// Imports\n\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});\n___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_destyle_css__WEBPACK_IMPORTED_MODULE_1__.default);\n___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_icons_css__WEBPACK_IMPORTED_MODULE_2__.default);\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"html {\\n  font-size: 16px;\\n}\\n\\nbody {\\n  font-family: MinecraftiaRegular;\\n}\\n\\nh2 {\\n  font-weight: 200;\\n  font-size: 2rem;\\n  margin: 10px;\\n}\\n\\n.h3,\\nh3 {\\n  font-weight: 100;\\n  font-size: 1.5rem;\\n  margin: 10px;\\n}\\n\\n.icon {\\n  background: none;\\n  color: #888;\\n  font-size: 1.5rem;\\n}\\n\\n.inputtext {\\n  font-family: MinecraftiaRegular;\\n  border: none;\\n  font-size: 1.2rem;\\n  display: block;\\n}\\n.inputtext.narrow {\\n  width: 20%;\\n}\\n.inputtext.r {\\n  text-align: center;\\n}\\n.inputtext[readonly] {\\n  background-color: #222;\\n}\\n\\n.dp1 {\\n  border-radius: 3px;\\n  padding: 5px;\\n  background-color: #eee;\\n}\\n\\n.dp2 {\\n  border-radius: 3px;\\n  padding: 5px;\\n  background-color: #ddd;\\n}\\n\\n.inner {\\n  margin: 10px;\\n}\\n\\n.column {\\n  display: flex;\\n  vertical-align: baseline;\\n}\\n\\n@media (max-width: 991px) {\\n  html {\\n    font-size: 150%;\\n  }\\n\\n  .maingrid {\\n    grid-template-columns: 1fr;\\n  }\\n\\n  .maingrid .button_editor {\\n    height: 70vh;\\n    grid-column-start: auto;\\n    grid-row-start: auto;\\n    grid-row-end: auto;\\n    font-size: 50px;\\n  }\\n}\\nheader {\\n  margin-right: 30px;\\n  border-bottom-right-radius: 10px;\\n  padding: 10px 30px;\\n  background-color: #222;\\n}\\n\\nheader a {\\n  position: relative;\\n  font-size: 2rem;\\n  text-decoration: none;\\n  font-weight: 500;\\n  color: white;\\n}\\n\\nfooter {\\n  margin-top: auto;\\n  padding: 10px 30px;\\n  background-color: #fff;\\n}\\n\\n.link h3 {\\n  float: left;\\n  margin: 6px 8px 0 0;\\n  font-weight: 100;\\n  font-size: 0.9rem;\\n}\\n\\n.inputcommand {\\n  position: relative;\\n  width: 100%;\\n  box-sizing: border-box;\\n}\\n\\n.main {\\n  background-color: #fff;\\n}\\n\\n.sign_editor {\\n  padding: 5%;\\n}\\n\\n.sign_wrapper {\\n  position: relative;\\n  width: 100%;\\n}\\n.sign_wrapper .sign {\\n  position: relative;\\n}\\n.sign_wrapper .sign svg {\\n  width: auto;\\n  height: auto;\\n}\\n.sign_wrapper .sign svg text {\\n  text-anchor: middle;\\n  dominant-baseline: central;\\n}\\n\\n.signtexts {\\n  margin-top: 5%;\\n}\\n.signtexts ul {\\n  list-style: none;\\n}\\n.signtexts ul h3 {\\n  display: inline;\\n}\\n.signtexts ul > * + * {\\n  padding-top: 5px;\\n}\\n\\n.button_editor {\\n  padding: 5%;\\n}\\n.button_editor .area_list {\\n  margin-top: 20px;\\n  padding: 10px;\\n  background-color: #eee;\\n  border-radius: 3px;\\n}\\n.button_editor .area_list h3 {\\n  display: inline;\\n}\\n.button_editor .area_list ul > li + li {\\n  margin-top: 5px;\\n}\\n.button_editor .area_list ul li {\\n  display: flex;\\n  justify-content: space-between;\\n}\\n.button_editor .area_list ul li.active {\\n  background-color: #222;\\n  color: white;\\n}\\n\\n.maingrid {\\n  width: 100%;\\n  display: grid;\\n  grid-template-columns: 1fr 1fr;\\n}\\n.maingrid .button_editor {\\n  height: 100vh;\\n  grid-column-start: 2;\\n  grid-row-start: 1;\\n  grid-row-end: 3;\\n}\\n.maingrid .util {\\n  display: flex;\\n  flex-direction: column;\\n  position: relative;\\n  background-color: #33f;\\n  height: auto;\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://signuigenerator/./src/scss/style.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet%5B1%5D.rules%5B1%5D.use%5B2%5D");
 
 /***/ }),
 
@@ -47,16 +47,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((module) => {
 
 eval("\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n  Author Tobias Koppers @sokra\n*/\n// css base code, injected by the css-loader\n// eslint-disable-next-line func-names\nmodule.exports = function (cssWithMappingToString) {\n  var list = []; // return the list of modules as css string\n\n  list.toString = function toString() {\n    return this.map(function (item) {\n      var content = cssWithMappingToString(item);\n\n      if (item[2]) {\n        return \"@media \".concat(item[2], \" {\").concat(content, \"}\");\n      }\n\n      return content;\n    }).join(\"\");\n  }; // import a list of modules into the list\n  // eslint-disable-next-line func-names\n\n\n  list.i = function (modules, mediaQuery, dedupe) {\n    if (typeof modules === \"string\") {\n      // eslint-disable-next-line no-param-reassign\n      modules = [[null, modules, \"\"]];\n    }\n\n    var alreadyImportedModules = {};\n\n    if (dedupe) {\n      for (var i = 0; i < this.length; i++) {\n        // eslint-disable-next-line prefer-destructuring\n        var id = this[i][0];\n\n        if (id != null) {\n          alreadyImportedModules[id] = true;\n        }\n      }\n    }\n\n    for (var _i = 0; _i < modules.length; _i++) {\n      var item = [].concat(modules[_i]);\n\n      if (dedupe && alreadyImportedModules[item[0]]) {\n        // eslint-disable-next-line no-continue\n        continue;\n      }\n\n      if (mediaQuery) {\n        if (!item[2]) {\n          item[2] = mediaQuery;\n        } else {\n          item[2] = \"\".concat(mediaQuery, \" and \").concat(item[2]);\n        }\n      }\n\n      list.push(item);\n    }\n  };\n\n  return list;\n};\n\n//# sourceURL=webpack://signuigenerator/./node_modules/css-loader/dist/runtime/api.js?");
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/runtime/getUrl.js":
-/*!********************************************************!*\
-  !*** ./node_modules/css-loader/dist/runtime/getUrl.js ***!
-  \********************************************************/
-/***/ ((module) => {
-
-eval("\n\nmodule.exports = function (url, options) {\n  if (!options) {\n    // eslint-disable-next-line no-param-reassign\n    options = {};\n  }\n\n  if (!url) {\n    return url;\n  } // eslint-disable-next-line no-underscore-dangle, no-param-reassign\n\n\n  url = String(url.__esModule ? url.default : url); // If url is already wrapped in quotes, remove them\n\n  if (/^['\"].*['\"]$/.test(url)) {\n    // eslint-disable-next-line no-param-reassign\n    url = url.slice(1, -1);\n  }\n\n  if (options.hash) {\n    // eslint-disable-next-line no-param-reassign\n    url += options.hash;\n  } // Should url be wrapped?\n  // See https://drafts.csswg.org/css-values-3/#urls\n\n\n  if (/[\"'() \\t\\n]|(%20)/.test(url) || options.needQuotes) {\n    return \"\\\"\".concat(url.replace(/\"/g, '\\\\\"').replace(/\\n/g, \"\\\\n\"), \"\\\"\");\n  }\n\n  return url;\n};\n\n//# sourceURL=webpack://signuigenerator/./node_modules/css-loader/dist/runtime/getUrl.js?");
 
 /***/ }),
 
@@ -158,16 +148,6 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
 
 eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\nexports.reactiveText = void 0;\r\nvar reactiveText = function (input, output) {\r\n    input.addEventListener('keyup', function () { output.textContent = input.value; });\r\n};\r\nexports.reactiveText = reactiveText;\r\n\n\n//# sourceURL=webpack://signuigenerator/./src/ts/sign.ts?");
 
-/***/ }),
-
-/***/ "./src/img/sign/oak.png":
-/*!******************************!*\
-  !*** ./src/img/sign/oak.png ***!
-  \******************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"c0190584634fe8f692bb.png\";\n\n//# sourceURL=webpack://signuigenerator/./src/img/sign/oak.png?");
-
 /***/ })
 
 /******/ 	});
@@ -196,9 +176,6 @@ eval("module.exports = __webpack_require__.p + \"c0190584634fe8f692bb.png\";\n\n
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = __webpack_modules__;
-/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
@@ -224,18 +201,6 @@ eval("module.exports = __webpack_require__.p + \"c0190584634fe8f692bb.png\";\n\n
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/global */
-/******/ 	(() => {
-/******/ 		__webpack_require__.g = (function() {
-/******/ 			if (typeof globalThis === 'object') return globalThis;
-/******/ 			try {
-/******/ 				return this || new Function('return this')();
-/******/ 			} catch (e) {
-/******/ 				if (typeof window === 'object') return window;
-/******/ 			}
-/******/ 		})();
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -250,52 +215,6 @@ eval("module.exports = __webpack_require__.p + \"c0190584634fe8f692bb.png\";\n\n
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/publicPath */
-/******/ 	(() => {
-/******/ 		var scriptUrl;
-/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
-/******/ 		var document = __webpack_require__.g.document;
-/******/ 		if (!scriptUrl && document) {
-/******/ 			if (document.currentScript)
-/******/ 				scriptUrl = document.currentScript.src
-/******/ 			if (!scriptUrl) {
-/******/ 				var scripts = document.getElementsByTagName("script");
-/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
-/******/ 			}
-/******/ 		}
-/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
-/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
-/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
-/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
-/******/ 		__webpack_require__.p = scriptUrl;
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/jsonp chunk loading */
-/******/ 	(() => {
-/******/ 		__webpack_require__.b = document.baseURI || self.location.href;
-/******/ 		
-/******/ 		// object to store loaded and loading chunks
-/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
-/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
-/******/ 		var installedChunks = {
-/******/ 			"bundle": 0
-/******/ 		};
-/******/ 		
-/******/ 		// no chunk on demand loading
-/******/ 		
-/******/ 		// no prefetching
-/******/ 		
-/******/ 		// no preloaded
-/******/ 		
-/******/ 		// no HMR
-/******/ 		
-/******/ 		// no HMR manifest
-/******/ 		
-/******/ 		// no on chunks loaded
-/******/ 		
-/******/ 		// no jsonp function
 /******/ 	})();
 /******/ 	
 /************************************************************************/
