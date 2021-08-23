@@ -156,7 +156,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
   \******************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"./assets/images/oak..png\";\n\n//# sourceURL=webpack://signuigenerator/./src/img/sign/oak.png?");
+eval("module.exports = __webpack_require__.p + \"./assets/images/oak.png\";\n\n//# sourceURL=webpack://signuigenerator/./src/img/sign/oak.png?");
 
 /***/ })
 
