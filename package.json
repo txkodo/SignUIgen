@@ -1,0 +1,33 @@
+{
+  "name": "signuigenerator",
+  "version": "1.0.0",
+  "description": "generate minecarft ui using sign",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode=development",
+    "start": "webpack-dev-server --mode=development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://txkodo@github.com/txkodo/SignUIgen.git"
+  },
+  "author": "txkodo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/txkodo/SignUIgen/issues"
+  },
+  "homepage": "https://github.com/txkodo/SignUIgen#readme",
+  "devDependencies": {
+    "css-loader": "^6.2.0",
+    "sass": "^1.38.0",
+    "sass-loader": "^12.1.0",
+    "ts-loader": "^9.2.5",
+    "typescript": "^4.3.5",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.0.0"
+  },
+  "dependencies": {
+    "style-loader": "^3.2.1"
+  }
+}
