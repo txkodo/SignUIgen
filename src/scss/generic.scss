@@ -40,7 +40,9 @@ h3
   &.r{
     text-align: center;
   }
-  
+  &[readonly]{
+    background-color:#222;
+  }
 }
 
 .dp1{
