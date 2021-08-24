@@ -1,85 +1,105 @@
 <html>
-  <head>
-    <meta name="veiwpoint" content="width=device-width, initial-scale=1.0">
-    <title>Test page</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/minecraftia" type="text/css" />
-  </head>
 
-  <body>
-    <section class="app">
-      <div class="maingrid">
-        <div class="main">
-          <header>
-            <a href="#">Minecraft Sign UI generator</a>
-          </header>
-          <div class="sign_editor">
-            <div class="sign_wrapper">
-              <div class="sign">
-                <svg viewBox="0 0 96 48" preserveAspectRatio="xMinYMid meet" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink">
-                <image xlink:href="./assets/images/oak.png" width="96" height="48">
-                <text x="48" y="7" font-size="8" fill="black" id="text1_output">Ig1</text>
-                <text x="48" y="15" font-size="8" fill="black" id="text2_output">Ig2</text>
-                <text x="48" y="25" font-size="8" fill="black" id="text3_output">Ig3</text>
-                <text x="48" y="35" font-size="8" fill="black" id="text4_output">Ig4Ig4</text>
-                </svg>
-              </div>
-              <div class="signtexts dp1">
-                <h3>Sign texts</h3>
-                <ul class="inner">
-                  <li><input type="text" name="text1" id="text1_input" class="dp2 inputtext"></li>
-                  <li><input type="text" name="text2" id="text2_input" class="dp2 inputtext"></li>
-                  <li><input type="text" name="text3" id="text3_input" class="dp2 inputtext"></li>
-                  <li><input type="text" name="text4" id="text4_input" class="dp2 inputtext"></li>
-                </ul>
-              </div>
-            </div>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Test page</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/minecraftia" type="text/css" />
+</head>
+
+<body>
+  <section class="app l">
+    <div class="l-header">
+      <div class="header">
+        <header>
+          <a href="#"><h1>Minecraft Sign UI generator</h1></a>
+        </header>
+      </div>
+    </div>
+
+    <div class="l-sign">
+      <div class="l-signImg">
+        <div class="sign">
+          <svg viewBox="0 0 96 48" preserveAspectRatio="xMinYMid meet" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <image xlink:href="./assets/images/oak.png" width="96" height="48" />
+            <text x="48" y="7" font-size="8" fill="black" id="text1_output">text1</text>
+            <text x="48" y="17" font-size="8" fill="black" id="text2_output">text2</text>
+            <text x="48" y="27" font-size="8" fill="black" id="text3_output">text3</text>
+            <text x="48" y="37" font-size="8" fill="black" id="text4_output">text4</text>
+          </svg>
+          <div id="ui_area" class="ui_area"></div>
+        </div>
+      </div>
+      <dev class="l-signText">
+        <div class="signtexts dp1">
+          <h4>Sign texts</h4>
+          <ul class="inner">
+            <li><input type="text" name="text1" value="text1" id="text1_input" class="dp2 inputtext"></li>
+            <li><input type="text" name="text2" value="text2" id="text2_input" class="dp2 inputtext"></li>
+            <li><input type="text" name="text3" value="text3" id="text3_input" class="dp2 inputtext"></li>
+            <li><input type="text" name="text4" value="text4" id="text4_input" class="dp2 inputtext"></li>
+          </ul>
+        </div>
+      </dev>
+    </div>
+    <div class="util"></div>
+
+    <div class="l-area">
+      <div class="l-areaEdit">
+        <div class="areaEdit dp1">
+          <div class="column areaEdit_name">
+            <span class="h4">Name :</span>
+            <div><input type="text" name="x0" id="area-name" class="dp2 inputtext max"></div>
+          </div>
+          <div class="column">
+            <span class="h4">X :</span>
+            <input type="number" name="x0" min="0" max="96" id="area-x0" class="dp2 inputNum">
+            <span class="h4">~</span>
+            <input type="number" name="x1" min="0" max="96" id="area-x1" class="dp2 inputNum">
+            <span class="ml10">(0-96)</span>
+          </div>
+          <div class="column">
+            <span class="h4 block">Y :</span>
+            <input type="number" name="y0" min="0" max="48" id="area-y0" class="dp2 inputNum">
+            <span class="h4 block">~</span>
+            <input type="number" name="y1" min="0" max="48" id="area-y1" class="dp2 inputNum">
+            <span class="ml10">(0-48)</span>
+          </div>
+          <div class="column">
+            <span class="h4">Command</span>
+          </div>
+          <div class="column">
+            <input type="text" name="y0" id="area-command" class="dp2 inputtext max">
           </div>
         </div>
-        <div class="button_editor">
-          <h2>Button Areas</h2>
-          <div class="area_setting dp1">
-            <div class="column">
-              <span class="h3">Name :</span>
-              <input type="text" name="x0" id="area-name" class="inner dp2 inputtext r">
-            </div>
-            <div class="column">
-              <span class="h3">X :</span>
-              <input type="number" name="x0" id="area-x0" class="inner dp2 narrow inputtext r">
-              <span class="h3">~</span>
-              <input type="number" name="x1" id="area-x1" class="inner dp2 narrow inputtext r">
-            </div>
-            <div class="column">
-              <span class="h3">Y :</span>
-              <input type="number" name="y0" id="area-y0" class="inner dp2 narrow inputtext r">
-              <span class="h3">~</span>
-              <input type="number" name="y1" id="area-y1" class="inner dp2 narrow inputtext r">
-            </div>
-            <div class="column">
-              <span class="h3">Command :</span>
-            </div>
-            <div class="column">  
-              <input type="text" name="y0" id="area-command" class="inner dp2 inputtext inputcommand">
-            </div>
-          </div>
-          <div class="area_list">
-            <h3>Area List</h3>
+      </div>
+      <div class="l-areaList">
+        <div class="areaList dp1">
+          <div class="areaList_title">
+            <h4>Area List</h4>
             <span class="fas fa-plus-circle icon" id="areaList-addButton"></span>
-            <ul id="areaList" class="dp1"></ul>
           </div>
+          <ul id="areaList"></ul>
         </div>
-        <div class="util">
-          <footer>
-            <ul class="follow-me link">
-              <h3>made by txkodo</h3>
-              <li><a href="https://twitter.com/txkodo" target="_blank" rel="noopener noreferrer"></a></li>
-              <li><a href="https://github.com/txkodo/SignUIgen" target="_blank" rel="noopener noreferrer"></a></li>
-            </ul>
-          </footer>
-        </div>
-    </section>
-    <script type="text/javascript" src="./bundle.js"></script>
-  </body>
+      </div>
+    </div>
+    <div class="l-footer">
+      <footer class="footer">
+        <ul class="follow-me footer_links">
+          <h5>made by txkodo</h5>
+          <li><a href="https://twitter.com/txkodo" target="_blank" rel="noopener noreferrer"></a></li>
+          <li><a href="https://github.com/txkodo/SignUIgen" target="_blank" rel="noopener noreferrer"></a></li>
+        </ul>
+        <ul class="follow-me footer_links">    
+          <h5>impressed by AiAkaishi</h5>
+          <li><a href="https://twitter.com/AiAkaishi" target="_blank" rel="noopener noreferrer"></a></li>
+        </ul>
+      </footer>
+    </div>
+  </section>
+  <script type="text/javascript" src="./bundle.js"></script>
+</body>
+
 </html>
