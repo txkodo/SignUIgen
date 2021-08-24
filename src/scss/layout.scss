@@ -1,0 +1,79 @@
+$breakpoint-md: 768px !default;
+
+@mixin md{
+  @media only screen and (max-width: $breakpoint-md ) {
+    @content;
+  }
+}
+
+.l{
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows:max-content max-content auto max-content;
+  grid-template-areas:
+    "header header"
+    "sign area"
+    "util area"
+    "footer footer";
+
+  @media only screen and (max-width: 768px) {
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows:max-content max-content auto max-content max-content;
+    grid-template-areas:
+      "header"
+      "sign"
+      "area"
+      "util"
+      "footer";
+  }
+}
+
+.l-header{
+  grid-area: header;
+}
+
+.l-sign{
+  height: auto;
+  display: grid;
+  margin-left: 10px;
+  @include md(){
+    margin-left: 0px;
+  }
+
+  grid-template-rows: auto auto;
+}
+
+.l-signText{
+  margin: 10px;
+}
+
+.l-signImg{
+  margin: 10px;
+}
+
+.l-area{
+  grid-area: area;
+  display: grid;
+  margin-right: 10px;
+  grid-template-rows: max-content 1fr;
+  @include md(){
+    margin-right: 0px;
+  }
+}
+  .l-areaEdit{
+    margin: 10px;
+  }
+
+  .l-areaList{
+    margin: 10px;
+  }
+  
+.l-util{
+  grid-area: util;
+}
+
+.l-footer{
+  grid-area: footer;
+}

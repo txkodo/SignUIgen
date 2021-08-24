@@ -10,7 +10,7 @@ module.exports = {
         // モジュールバンドルを行った結果を出力する場所やファイル名の指定
         // "__dirname"はこのファイルが存在するディレクトリを表すnode.jsで定義済みの定数
         path: path.join(__dirname,'dist'),
-        filename: '[name].js'  // [name]はentryで記述した名前(この例ではbundle）が入る
+        filename: '[name].js',  // [name]はentryで記述した名前(この例ではbundle）が入る
     },
     // モジュールとして扱いたいファイルの拡張子を指定する
     // 例えば「import Foo from './foo'」という記述に対して"foo.ts"という名前のファイルをモジュールとして探す
@@ -28,6 +28,13 @@ module.exports = {
             {
                 // 拡張子が.tsで終わるファイルに対して、TypeScriptコンパイラを適用する
                 test:/\.ts$/,loader:'ts-loader'
+            },
+            {
+                test: /\.(png|jpg|gif|svg|eot|ttf|woff)$/,
+                type: 'asset/resource',
+                generator: {
+                  filename: "./assets/images/[name][ext]"
+                }
             },
             {
 				test: /\.(scss|sass|less|css)$/i,

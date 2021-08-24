@@ -1,13 +1,9 @@
+import { Area2d } from "./area"
+import { Sign } from "./sign"
 
-interface span{
-  start :number
-  end:number
-}
-
-interface Area{
+interface UiArea{
   name:string
-  x:span
-  y:span
+  area:Area2d
   command:string
 }
 
@@ -23,7 +19,7 @@ class Button {
 
 export class AreaItem {
   active: Boolean
-  private area: Area
+  private area: UiArea
   readonly areaManager:AreaManager
   readonly element: HTMLElement
   
@@ -31,7 +27,7 @@ export class AreaItem {
     this.element  = this.createItem()
     this.areaManager = areaManager
     this.active   = false
-    this.area     = { name:'area', x:{start:0,end:0}, y:{start:0,end:0},command:''}
+    this.area     = { name:'area', area:{x:{start:0,end:0}, y:{start:0,end:0}}, command:''}
   }
 
   createItem():HTMLElement{
@@ -52,7 +48,7 @@ export class AreaItem {
     return button
   }
 
-  setValue(area:Area){
+  setValue(area:UiArea){
     this.area = area
     if(this.element.firstChild){this.element.firstChild.textContent = area.name}
   }
@@ -105,12 +101,12 @@ export class AreaInput{
       this.command = command
   }
 
-  setValue(area:Area){
+  setValue(area:UiArea){
     this.name.value = area.name
-    this.x0.value = `${area.x.start}`
-    this.x1.value = `${area.x.end}`
-    this.y0.value = `${area.y.start}`
-    this.y1.value = `${area.y.end}`
+    this.x0.value = `${area.area.x.start}`
+    this.x1.value = `${area.area.x.end}`
+    this.y0.value = `${area.area.y.start}`
+    this.y1.value = `${area.area.y.end}`
     this.command.value = area.command
   }
     
@@ -134,15 +130,19 @@ export class AreaInput{
 }
 
 export class AreaSetting{
-  area:Area
+  areaManager:AreaManager
+  area:UiArea
   areaItem:AreaItem | null
   areaInput:AreaInput
 
-  constructor(areaInput:AreaInput) {
+  constructor(areaManager:AreaManager,areaInput:AreaInput) {
+    this.areaManager = areaManager
     this.area = {
       name:'',
-      x:{start:0,end:0},
-      y:{start:0,end:0},
+      area:{
+        x:{start:0,end:0},
+        y:{start:0,end:0}
+      },
       command:''
     }
 
@@ -150,10 +150,10 @@ export class AreaSetting{
 
     this.areaInput.name.addEventListener(   'change',() => {this.area.name    = this.areaInput.name.value;           this.onChange()})
     this.areaInput.command.addEventListener('change',() => {this.area.command    = this.areaInput.command.value;        this.onChange()})
-    this.areaInput.x0.addEventListener(     'change',() => {this.area.x.start = parseFloat(this.areaInput.x0.value); this.onChange()})
-    this.areaInput.x1.addEventListener(     'change',() => {this.area.x.end   = parseFloat(this.areaInput.x1.value); this.onChange()})
-    this.areaInput.y0.addEventListener(     'change',() => {this.area.y.start = parseFloat(this.areaInput.y0.value); this.onChange()})
-    this.areaInput.y1.addEventListener(     'change',() => {this.area.y.end   = parseFloat(this.areaInput.y1.value); this.onChange()})
+    this.areaInput.x0.addEventListener(     'change',() => {this.area.area.x.start = parseFloat(this.areaInput.x0.value); this.onChange()})
+    this.areaInput.x1.addEventListener(     'change',() => {this.area.area.x.end   = parseFloat(this.areaInput.x1.value); this.onChange()})
+    this.areaInput.y0.addEventListener(     'change',() => {this.area.area.y.start = parseFloat(this.areaInput.y0.value); this.onChange()})
+    this.areaInput.y1.addEventListener(     'change',() => {this.area.area.y.end   = parseFloat(this.areaInput.y1.value); this.onChange()})
 
     this.areaItem = null
     this.disapply()
@@ -164,17 +164,22 @@ export class AreaSetting{
     this.area = areaItem.getValue()
     this.reflesh()
     this.areaInput.writable()
+    this.areaManager.sign.rect.show()
+    this.areaManager.sign.rect.setPos(this.area.area)
   }
-
+  
   disapply(){
     this.areaItem = null
     this.area = {
       name:'',
-      x:{start:0,end:0},
-      y:{start:0,end:0},
+      area:{
+        x:{start:0,end:0},
+        y:{start:0,end:0},
+      },
       command:''
     }
     this.reflesh()
+    this.areaManager.sign.rect.hide()
     this.areaInput.readonly()
   }
   
@@ -184,6 +189,7 @@ export class AreaSetting{
 
   onChange(){
     if (this.areaItem){
+      this.areaManager.sign.rect.setPos(this.area.area)
       this.areaItem.setValue(this.area)
     }
   }
@@ -220,11 +226,12 @@ export class AreaList{
 export class AreaManager{
   areaList:AreaList
   areaSetting:AreaSetting
+  sign: Sign
   
-  constructor(listElement:HTMLElement,addButton:HTMLElement,areaInput:AreaInput){
+  constructor(listElement:HTMLElement,addButton:HTMLElement,areaInput:AreaInput,sign:Sign){
+    this.sign = sign
     this.areaList    = new AreaList(listElement)
-    this.areaSetting = new AreaSetting(areaInput)
-
+    this.areaSetting = new AreaSetting(this,areaInput)
     addButton.addEventListener('click',() => {
       const li = new AreaItem(this)
       this.areaList.append(li)
