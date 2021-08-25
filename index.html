@@ -29,7 +29,7 @@
             <text x="48" y="27" font-size="8" fill="black" id="text3_output">text3</text>
             <text x="48" y="37" font-size="8" fill="black" id="text4_output">text4</text>
           </svg>
-          <div id="ui_area" class="ui_area"></div>
+          <div id="ui_area" class="sign_selectedArea"></div>
         </div>
       </div>
       <dev class="l-signText">
@@ -44,8 +44,16 @@
         </div>
       </dev>
     </div>
-    <div class="util"></div>
-
+    <div class="l-util">
+      <div class="util dp1">
+        <div class="util_path">
+          <div><input type="text" name="text4" placeholder="namespace"  id="namespaceInput" pattern="^[0-9a-z_-]+$" class="dp2 inputtext inputtext-pattern max" required></div>        
+          <span class="h4"> : </span>
+          <div><input type="text" name="text4" placeholder="path" id="pathInput" pattern="^([0-9a-z_-]+/)*[0-9a-z_-]+$" class="dp2 inputtext inputtext-pattern max" required></div>
+        </div>
+        <button class="button util_downloadDatapack" id="downloadDatapack">Download Datapack</button>
+      </div>
+    </div>
     <div class="l-area">
       <div class="l-areaEdit">
         <div class="areaEdit dp1">
