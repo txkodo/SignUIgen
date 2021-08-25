@@ -1,4 +1,5 @@
 import { Area2d } from "./area"
+import { Direction } from "./direction"
 import { Sign } from "./sign"
 
 interface UiArea{
@@ -75,6 +76,41 @@ export class AreaItem {
       if (self.active){self.areaManager.areaSetting.disapply()}
       self.areaManager.areaList.remove(self)
     }
+  }
+
+  genConnamd(direction:Direction){
+    if (
+      this.area.area.x.end == this.area.area.x.start ||
+      this.area.area.x.end == this.area.area.x.start ||
+      !this.area.command
+      ){
+        return null
+    }
+    const u_ratio_max = Math.max(this.area.area.x.end,this.area.area.x.start)/96
+    const u_ratio_min = Math.min(this.area.area.x.end,this.area.area.x.start)/96
+    const v_ratio_max = Math.max(this.area.area.y.end,this.area.area.y.start)/48+(3.625/16)
+    const v_ratio_min = Math.min(this.area.area.y.end,this.area.area.y.start)/48+(3.625/16)
+    let vector_min:string
+    let vector_max:string
+    switch (direction){
+      case 'x+':
+        vector_min = `~ ~${v_ratio_min} ~${u_ratio_min}`
+        vector_max = `~ ~${v_ratio_max-1} ~${u_ratio_max-1}`
+        break
+      case 'x-':
+        vector_max = `~ ~${v_ratio_min} ~${-u_ratio_min}`
+        vector_min = `~ ~${v_ratio_max-1} ~${1-u_ratio_max}`
+        break
+      case 'z+':
+        vector_max = `~${-u_ratio_min} ~${v_ratio_min} ~`
+        vector_min = `~${1-u_ratio_max} ~${v_ratio_max-1} ~`
+        break
+      case 'z-':
+        vector_min = `~${u_ratio_min} ~${v_ratio_min} ~`
+        vector_max = `~${u_ratio_max-1} ~${v_ratio_max-1} ~`
+        break
+    }
+    return `execute if blocks ${vector_min} ${vector_min} ${vector_max} all run ${this.area.command}`
   }
 }
 
@@ -219,6 +255,17 @@ export class AreaList{
   remove(li:AreaItem){
     this.list = this.list.filter( item => item !== li)
     this.element.removeChild(li.element)
+  }
+
+  genAllCommands(dir:Direction){
+    const commands= []
+    for (let area of this.list){
+      const command = area.genConnamd(dir)
+      if (command){
+        commands.push(command)
+      }
+    }
+    return commands.join('\n')
   }
 }
 

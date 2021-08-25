@@ -65,6 +65,25 @@
   text-align: right; 
 }
 
+.sign
+{
+  position: relative;
+  svg{
+    width: auto;
+    height: auto;
+    text{
+      text-anchor: middle;
+      dominant-baseline: central;
+    }
+  }
+}
+
+
+.sign_selectedArea{
+  position: absolute;
+  background-color: #fff;
+  opacity: 0.5;
+}
 
 
 .signtexts{

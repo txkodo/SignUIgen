@@ -2,33 +2,4 @@
 @import "./icons.css";
 @import "./generic.scss";
 @import "./layout.scss";
-@import "./areaList.scss";
-
-.main
-{
-  background-color: #fff;
-}
-
-.sign
-{
-  position: relative;
-  // background-image: url("../img/sign/oak.png");
-  // background-size: contain;
-  // background-color: coral;
-
-  svg{
-    width: auto;
-    height: auto;
-    text{
-      text-anchor: middle;
-      dominant-baseline: central;
-    }
-  }
-
-}
-
-.ui_area{
-  position: absolute;
-  background-color: #fff;
-  opacity: 0.5;
-}
+@import "./unique.scss";
