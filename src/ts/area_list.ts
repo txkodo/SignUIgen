@@ -88,8 +88,8 @@ export class AreaItem {
     }
     const u_ratio_max = Math.max(this.area.area.x.end,this.area.area.x.start)/96
     const u_ratio_min = Math.min(this.area.area.x.end,this.area.area.x.start)/96
-    const v_ratio_max = Math.max(this.area.area.y.end,this.area.area.y.start)/48+(3.625/16)
-    const v_ratio_min = Math.min(this.area.area.y.end,this.area.area.y.start)/48+(3.625/16)
+    const v_ratio_max = Math.max(this.area.area.y.end,this.area.area.y.start)/96+(3.625/16)
+    const v_ratio_min = Math.min(this.area.area.y.end,this.area.area.y.start)/96+(3.625/16)
     let vector_min:string
     let vector_max:string
     switch (direction){
@@ -110,7 +110,7 @@ export class AreaItem {
         vector_max = `~${u_ratio_max-1} ~${v_ratio_max-1} ~`
         break
     }
-    return `execute if blocks ${vector_min} ${vector_min} ${vector_max} all run ${this.area.command}`
+    return `execute if block ~ ~ ~ oak_wall_sign if blocks ${vector_min} ${vector_min} ~ ~ ~ all if blocks ${vector_max} ${vector_max} ~ ~ ~ all run ${this.area.command}`
   }
 }
 

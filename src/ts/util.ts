@@ -30,7 +30,10 @@ export class Utility{
   genGiveFunction(funcpath:string,text1:string,text2:string,text3:string,text4:string){
     const constructInnerCommand = (startPos:string,middle:(i:number)=>string,facing:string) => {
       let middlestr = ''
-      for (let i = 0.9; i > 0.1; i-=0.05){
+      for (let i = 0; i < 30; i++){
+        middlestr += middle(0.9)
+      }
+      for (let i = 0.9; i > 0.1; i-=0.1){
         middlestr += middle(i)
       }
       return `execute if block ~ ~ ~ oak_wall_sign[facing=${facing}] positioned ${startPos} ${middlestr}run function ${funcpath}/${facing}`
