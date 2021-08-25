@@ -9,7 +9,7 @@ $breakpoint-md: 768px !default;
 .l{
   display: grid;
   height: 100vh;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 4fr 3fr;
   grid-template-rows:max-content max-content auto max-content;
   grid-template-areas:
     "header header"
@@ -71,7 +71,12 @@ $breakpoint-md: 768px !default;
   }
   
 .l-util{
+  margin: 10px;
+  margin-left: 20px;
   grid-area: util;
+  @include md(){
+    margin-left: 10px;
+  }
 }
 
 .l-footer{

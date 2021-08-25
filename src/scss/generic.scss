@@ -63,6 +63,12 @@ h4
   }
 }
 
+.inputtext-pattern{
+  &:invalid{
+    background-color:#F77;
+  }
+}
+
 .dp1{
   border-radius: 3px;
   padding: 15px;
@@ -89,4 +95,16 @@ h4
 
 .block{
   display: block;
+}
+
+.button{
+  padding: 7px 15px;
+  background-color: #ccc;
+  border-radius: 3px;
+  color: #000;
+  transition: all .3s ease;
+  &:hover{
+    background-color: #000;
+    color: #fff;
+  }
 }
