@@ -13,7 +13,7 @@
     <div class="l-header">
       <div class="header">
         <header>
-          <a href="#"><h1>Minecraft Sign UI generator</h1></a>
+          <a href="#"><h1>Sign UI generator for Minecraft</h1></a>
         </header>
       </div>
     </div>
@@ -23,24 +23,37 @@
         <div class="sign">
           <svg viewBox="0 0 96 48" preserveAspectRatio="xMinYMid meet" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink">
-            <image xlink:href="./assets/images/oak.png" width="96" height="48" />
+            <image xlink:href="./assets/images/oak.png" id="sign_image" width="96" height="48" />
             <text x="48" y="7" font-size="8" fill="black" id="text1_output">text1</text>
             <text x="48" y="17" font-size="8" fill="black" id="text2_output">text2</text>
             <text x="48" y="27" font-size="8" fill="black" id="text3_output">text3</text>
-            <text x="48" y="37" font-size="8" fill="black" id="text4_output">text4</text>
+            <text x="48" y="37" font-size="8" fill="black" id="text4_output">{"text":"text4"}</text>
           </svg>
           <div id="ui_area" class="sign_selectedArea"></div>
         </div>
       </div>
-      <dev class="l-signText">
-        <div class="signtexts dp1">
+      <dev class="l-signText dp1">
+        <div class="signtexts">
           <h4>Sign texts</h4>
           <ul class="inner">
             <li><input type="text" name="text1" value="text1" id="text1_input" class="dp2 inputtext"></li>
             <li><input type="text" name="text2" value="text2" id="text2_input" class="dp2 inputtext"></li>
             <li><input type="text" name="text3" value="text3" id="text3_input" class="dp2 inputtext"></li>
-            <li><input type="text" name="text4" value="text4" id="text4_input" class="dp2 inputtext"></li>
+            <li><input type="text" name="text4" value='{"text":"text4"}' id="text4_input" class="dp2 inputtext"></li>
           </ul>
+        </div>
+        <div class="signType">
+          <h4>signType</h4>
+          <select name="woodType" id="woodType" class="dp2" >
+            <option value="oak">oak</option>
+            <option value="birch">birch</option>
+            <option value="spruce">spruce</option>
+            <option value="jungle">jungle</option>
+            <option value="acacia">acacia</option>
+            <option value="dark_oak">dark_oak</option>
+            <option value="crimson">crimson</option>
+            <option value="warped">warped</option>
+            </select>
         </div>
       </dev>
     </div>
