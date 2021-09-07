@@ -1,5 +1,4 @@
 import "./scss/style.scss";
-import './img/sign/oak.png';
 
 import { AreaInput, AreaManager } from "./ts/area_list";
 import { Sign } from "./ts/sign";
@@ -16,7 +15,9 @@ for (let i = 1; i <=4; i++){
   texts.push(new Reactive(input,output,'keyup'))
 }
 const rect = <HTMLElement>document.getElementById('ui_area')
-const sign = new Sign(texts[0],texts[1],texts[2],texts[3],rect)
+const sign_image = <SVGImageElement><HTMLOrSVGImageElement>document.getElementById('sign_image')
+const woodType = <HTMLInputElement>document.getElementById('woodType')
+const sign = new Sign(texts[0],texts[1],texts[2],texts[3],rect,sign_image,woodType)
 
 
 const areaList = <HTMLInputElement>document.getElementById('areaList')
@@ -37,3 +38,4 @@ const datapackDL = <HTMLInputElement>document.getElementById('downloadDatapack')
 const namespaceInput = <HTMLInputElement>document.getElementById('namespaceInput')
 const pathInput = <HTMLInputElement>document.getElementById('pathInput')
 new Utility(sign,areaManager,datapackDL,namespaceInput,pathInput);
+

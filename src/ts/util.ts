@@ -36,10 +36,11 @@ export class Utility{
       for (let i = 0.9; i > 0.1; i-=0.1){
         middlestr += middle(i)
       }
-      return `execute if block ~ ~ ~ oak_wall_sign[facing=${facing}] positioned ${startPos} ${middlestr}run function ${funcpath}/${facing}`
+      return `execute if block ~ ~ ~ ${this.sign.woodType}_wall_sign[facing=${facing}] positioned ${startPos} ${middlestr}run function ${funcpath}/${facing}`
     }
 
-    const textPart = (text:string,command:string) => `'{"text":"${text}","clickEvent":{"action":"run_command","value":"${command}"}}'`
+    const escape = (text:string) => text.match(/^[.*]$|^{.*}$/) ? text : '"' + text.replace('\\','\\\\"').replace('"','\\"') + '"'
+    const textPart = (text:string,command:string) => `'[{"text":"","clickEvent":{"action":"run_command","value":"${command}"}},${escape(text)}]'`
     const textPartTranslate = (text:string,command:string) => `'{"translate":"${text}","with":[{"nbt":"x","block":"~ ~ ~"},{"nbt":"y","block":"~ ~ ~"},{"nbt":"z","block":"~ ~ ~"}],"clickEvent":{"action":"run_command","value":"${command}"}}'`
     
     const cmd1 = constructInnerCommand('~-0.395 ~ ~',i => `facing entity @s eyes positioned ^ ^ ^${i} rotated as @s positioned ^ ^ ^${i} positioned ~0.5 ~ ~ align x positioned ~0.105 ~ ~ `,'east')
@@ -47,7 +48,7 @@ export class Utility{
     const cmd3 = constructInnerCommand('~ ~ ~-0.395',i => `facing entity @s eyes positioned ^ ^ ^${i} rotated as @s positioned ^ ^ ^${i} positioned ~ ~ ~0.5 align z positioned ~ ~ ~0.105 `,'south')
     const cmd4 = constructInnerCommand('~ ~ ~0.395',i => `facing entity @s eyes positioned ^ ^ ^${i} rotated as @s positioned ^ ^ ^${i} positioned ~ ~ ~-0.5 align z positioned ~ ~ ~0.895 `,'north')
 
-    const command = `give @s oak_sign{BlockEntityTag:{Text1:${textPart(text1,cmd1)},Text2:${textPart(text2,cmd2)},Text3:${textPart(text3,cmd3)},Text4:${textPartTranslate(text4,cmd4)}}}`
+    const command = `give @s ${this.sign.woodType}_sign{BlockEntityTag:{Text1:${textPart(text1,cmd1)},Text2:${textPart(text2,cmd2)},Text3:${textPart(text3,cmd3)},Text4:${textPartTranslate(text4,cmd4)}}}`
     return command
   }
 

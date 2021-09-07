@@ -30,13 +30,24 @@ export class Sign{
   text2: Reactive
   text3: Reactive
   text4: Reactive
+  woodType:string
+  image: SVGImageElement
   
-  constructor(  text1: Reactive, text2: Reactive, text3: Reactive, text4: Reactive, rect: HTMLElement){
+  constructor(  text1: Reactive, text2: Reactive, text3: Reactive, text4: Reactive, rect: HTMLElement,image:SVGImageElement,woodType:HTMLElement){
+    this.image = image
     this.text1 = text1
     this.text2 = text2
     this.text3 = text3
     this.text4 = text4
+    this.woodType = 'oak'
     this.rect  = new Rect(rect)
+    woodType.addEventListener('change',event => this.changeWoodType(event))
     console.log(this.rect)
+  }
+
+  changeWoodType(event:Event){
+    const selector = <HTMLInputElement>(event.target)
+    this.woodType = selector.value
+    this.image.setAttribute('xlink:href',`./assets/images/${selector.value}.png`)
   }
 }
