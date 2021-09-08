@@ -65,6 +65,7 @@
 .follow-me li a[href*="whatsapp.com"]::before       { content: "\f232"; }
 .follow-me li a[href*="wordpress.com"]::before,
 .follow-me li a[href*="wordpress.org"]::before      { content: "\f19a"; }
+.follow-me li a[href*="youtu.be"]::before,
 .follow-me li a[href*="youtube.com"]::before        { content: "\f16a"; }
 .follow-me li a[href$="/feed"]::before              { content: "\f09e"; }
 .follow-me li a[href$="/subscribe"]::before         { content: "\f000"; font-family: blogicon; }
